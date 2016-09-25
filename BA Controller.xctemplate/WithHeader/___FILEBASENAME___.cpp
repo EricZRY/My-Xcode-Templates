@@ -1,0 +1,35 @@
+//
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//___COPYRIGHT___
+//
+
+#include "___FILEBASENAME___.h"
+
+___FILEBASENAMEASIDENTIFIER___* ___FILEBASENAMEASIDENTIFIER___::____FILEBASENAMEASIDENTIFIER____Instance = nullptr;
+
+___FILEBASENAMEASIDENTIFIER___::___FILEBASENAMEASIDENTIFIER___()
+:m_functionON(false)
+{}
+
+___FILEBASENAMEASIDENTIFIER___::~___FILEBASENAMEASIDENTIFIER___()
+{}
+
+___FILEBASENAMEASIDENTIFIER___* ___FILEBASENAMEASIDENTIFIER___::getInstance(){
+    if (!____FILEBASENAMEASIDENTIFIER____Instance) {
+        ____FILEBASENAMEASIDENTIFIER____Instance = new ___FILEBASENAMEASIDENTIFIER___();
+    }
+    return ____FILEBASENAMEASIDENTIFIER____Instance;
+}
+
+void ___FILEBASENAMEASIDENTIFIER___::purgeData(){
+    if (____FILEBASENAMEASIDENTIFIER____Instance) {
+        CC_SAFE_DELETE(____FILEBASENAMEASIDENTIFIER____Instance);
+    }
+}
+
+void ___FILEBASENAMEASIDENTIFIER___::initData(CCDictionary *dic){
+	m_functionON = true;
+}
