@@ -95,7 +95,7 @@ ssize_t ___FILEBASENAMEASIDENTIFIER___::numberOfCellsInTableView(CCTableView *ta
 
 #pragma mark - ___FILEBASENAMEASIDENTIFIER___Cell class
 ___FILEBASENAMEASIDENTIFIER___Cell* ___FILEBASENAMEASIDENTIFIER___Cell::create(___FILEBASENAMEASIDENTIFIER___* parent) {
-    ___FILEBASENAMEASIDENTIFIER___Cell ret = new ___FILEBASENAMEASIDENTIFIER___Cell();
+    ___FILEBASENAMEASIDENTIFIER___Cell* ret = new ___FILEBASENAMEASIDENTIFIER___Cell();
     if (ret && ret->init(parent)) {
         ret->autorelease();
     } else {

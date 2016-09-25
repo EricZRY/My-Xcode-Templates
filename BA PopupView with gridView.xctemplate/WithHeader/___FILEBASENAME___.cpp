@@ -80,11 +80,13 @@ cocos2d::CCSize ___FILEBASENAMEASIDENTIFIER___::gridSizeForTable(cocos2d::extens
 }
 
 CCTableViewCell* ___FILEBASENAMEASIDENTIFIER___::gridAtIndex(cocos2d::extension::CCMultiColTableView *table, ssize_t idx){
+    if (idx >= m_data.size() && idx < 0 ) return nullptr;
     CCTableViewCell* pRet = nullptr;
-    if (idx < m_data.size() && idx >= 0 ){
-        pRet = BASendFriendGiftBagViewCell::create(m_data[idx],this);
+    pRet = table->dequeueGrid();
+    if (pRet) {
+        pRet = ___FILEBASENAMEASIDENTIFIER___Cell::create(m_data[idx],this);
     }else{
-        pRet = BASendFriendGiftBagViewCell::create(-1,this);
+        pRet->setData();
     }
 	return pRet;
 }
@@ -115,7 +117,7 @@ ___FILEBASENAMEASIDENTIFIER___Cell::___FILEBASENAMEASIDENTIFIER___Cell()
 ___FILEBASENAMEASIDENTIFIER___Cell::~___FILEBASENAMEASIDENTIFIER___Cell()
 {}
 
-___FILEBASENAMEASIDENTIFIER___Cell* ___FILEBASENAMEASIDENTIFIER___Cell::create(BASendFriendGiftBagView* parent){
+___FILEBASENAMEASIDENTIFIER___Cell* ___FILEBASENAMEASIDENTIFIER___Cell::create(___FILEBASENAMEASIDENTIFIER___* parent){
 	___FILEBASENAMEASIDENTIFIER___Cell* pRet = new ___FILEBASENAMEASIDENTIFIER___Cell();
 	if (pRet && pRet->init(parent)){
 		pRet->autorelease();
@@ -125,7 +127,7 @@ ___FILEBASENAMEASIDENTIFIER___Cell* ___FILEBASENAMEASIDENTIFIER___Cell::create(B
 	return pRet;
 }
 
-bool ___FILEBASENAMEASIDENTIFIER___Cell::init(BASendFriendGiftBagView* parent){
+bool ___FILEBASENAMEASIDENTIFIER___Cell::init(___FILEBASENAMEASIDENTIFIER___* parent){
 	bool bRet = false;
 	do{
 		/* code */

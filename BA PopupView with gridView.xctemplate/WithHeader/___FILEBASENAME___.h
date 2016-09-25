@@ -65,7 +65,7 @@ class ___FILEBASENAMEASIDENTIFIER___Cell
 ,public CCBSelectorResolver
 {
 public:
-	static ___FILEBASENAMEASIDENTIFIER___Cell* create(BASendFriendGiftBagView* parent);
+	static ___FILEBASENAMEASIDENTIFIER___Cell* create(___FILEBASENAMEASIDENTIFIER___* parent);
 	void setData();
 protected:
 	virtual void onEnter();
@@ -79,7 +79,7 @@ private:
 	___FILEBASENAMEASIDENTIFIER___Cell();
 	~___FILEBASENAMEASIDENTIFIER___Cell();
 
-	bool init(BASendFriendGiftBagView* parent);
+	bool init(___FILEBASENAMEASIDENTIFIER___* parent);
 	virtual bool onAssignCCBMemberVariable(cocos2d::CCObject * pTarget, const char * pMemberVariableName, cocos2d::CCNode * pNode);
     virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::CCObject * pTarget, const char * pSelectorName){return NULL;}
     virtual void onResolveCCBCCControlSelector(cocos2d::CCObject * pTarget, const char * pSelectorName, SEL_CCControlHandler& h);
