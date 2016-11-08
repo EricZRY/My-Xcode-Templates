@@ -5,35 +5,21 @@
 	<key>Kind</key>
 	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
 	<key>Description</key>
-	<string>An empty C++ file.</string>
+	<string>an empty SingletonTemplates header file.</string>
 	<key>Summary</key>
-	<string>An empty C++ file.</string>
+	<string>An empty header file</string>
 	<key>SortOrder</key>
-	<string>34</string>
+	<string>32</string>
 	<key>AllowedTypes</key>
 	<array>
-		<string>public.c-plus-plus-source</string>
+		<string>public.c-header</string>
+		<string>public.c-plus-plus-header</string>
 	</array>
+	<key>BuildableType</key>
+	<string>None</string>
 	<key>DefaultCompletionName</key>
-	<string>File</string>
+	<string>Header</string>
 	<key>MainTemplateFile</key>
 	<string>___FILEBASENAME___.h</string>
-	<key>Options</key>
-	<array>
-		<dict>
-			<key>Identifier</key>
-			<string>productName</string>
-			<key>Required</key>
-			<true/>
-			<key>Name</key>
-			<string>Name:</string>
-			<key>Description</key>
-			<string>The name of the file to create</string>
-			<key>Type</key>
-			<string>text</string>
-			<key>NotPersisted</key>
-			<true/>
-		</dict>
-	</array>
 </dict>
 </plist>
